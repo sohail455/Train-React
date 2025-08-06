@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 2.5rem;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+a.ctaLink:link,
+a.ctaLink:visited {
+  background-color: mediumseagreen;
+  color: var(--color-dark--0);
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+}
