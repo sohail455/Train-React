@@ -1,12 +1,13 @@
 import styles from "./Tours.module.css";
 import PageNav from "../components/pageNav";
+import TripList from "../components/TripList";
 
-function Tours() {
+function Tours({ tours }) {
   return (
     <main className={styles.tours}>
       <PageNav />
       <div>
-        <h1>Welcome to our Tours page </h1>
+        <TripList trips={tours} />
       </div>
     </main>
   );

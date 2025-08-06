@@ -1,12 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import Tours from "./pages/Tours";
+import Career from "./pages/career";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [tours, setTours] = useState([]);
+  useEffect(function () {
+    async function getTours() {
+      try {
+        const res = await fetch("http://localhost:3000/trips")
+        const data = await res.json()
+        setTours(data)
+      } catch {
+        alert("error in getting data..")
+      }
+    }
+    getTours()
+  }, [])
 
   return (
     <>
@@ -14,7 +27,8 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="pricing" element={<Pricing />} />
-          <Route path="tours" element={<Tours />} />
+          <Route path="tours" element={<Tours tours={tours} />} />
+          <Route path="Career" element={<Career />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* تمركز أفقي */
+    align-items: center;
+    /* تمركز عمودي */
+
+}

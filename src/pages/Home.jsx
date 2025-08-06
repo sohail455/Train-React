@@ -2,10 +2,16 @@ import styles from "./Home.module.css";
 import PageNav from "../components/pageNav";
 function Home() {
   return (
-    <div className={styles.homePage}>
+    <main className={styles.homePage}>
       <PageNav />
-    </div>
+      <section className={styles.container}>
+        <h1>You Travel Across Egypt.</h1>
+        <h1>WorldWise Makes Your Trip Easier.</h1>
+        <button onClick={() => navigate("/app")}>Let's Start</button>
+      </section>
+    </main>
   );
 }
+
 
 export default Home;

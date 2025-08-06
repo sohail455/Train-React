@@ -7,7 +7,7 @@ function PageNav() {
       <Logo />
       <ul>
         <li>
-          <NavLink to={"/pricing"}>Career</NavLink>
+          <NavLink to={"/career"}>Career</NavLink>
         </li>
         <li>
           <NavLink to={"/pricing"}>Pricing</NavLink>

@@ -1,0 +1,103 @@
+{
+    "trips": [
+        {
+            "id": 1,
+            "origin": "Cairo",
+            "destination": "Aswan",
+            "train_number": "1902",
+            "departure_time": "00:30",
+            "arrival_time": "12:30",
+            "duration": "12 hours",
+            "date": "2024-08-06",
+            "type": "Express"
+        },
+        {
+            "id": 2,
+            "origin": "Alexandria",
+            "destination": "Giza",
+            "train_number": "981",
+            "departure_time": "05:00",
+            "arrival_time": "18:55",
+            "duration": "13 hours 55 minutes",
+            "date": "2024-08-06",
+            "type": "Express"
+        },
+        {
+            "id": 3,
+            "origin": "Cairo",
+            "destination": "Ismailia",
+            "train_number": "983",
+            "departure_time": "07:00",
+            "arrival_time": "21:05",
+            "duration": "14 hours",
+            "date": "2024-08-06",
+            "type": "Express"
+        },
+        {
+            "id": 4,
+            "origin": "Cairo",
+            "destination": "Alexandria",
+            "train_number": "887",
+            "departure_time": "15:00",
+            "arrival_time": "04:00 (next day)",
+            "duration": "13 hours",
+            "date": "2024-08-06",
+            "type": "Express"
+        },
+        {
+            "id": 5,
+            "origin": "Cairo",
+            "destination": "Aswan",
+            "train_number": "86",
+            "departure_time": "19:45",
+            "arrival_time": "09:25 (next day)",
+            "duration": "13 hours 40 minutes",
+            "date": "2024-08-06",
+            "type": "Sleeper"
+        },
+        {
+            "id": 6,
+            "origin": "Alexandria",
+            "destination": "Ismailia",
+            "train_number": "3012-3013",
+            "departure_time": "04:00",
+            "arrival_time": "08:39",
+            "duration": "4 hours 39 minutes",
+            "date": "2024-08-06",
+            "type": "Russian AC"
+        },
+        {
+            "id": 7,
+            "origin": "Alexandria",
+            "destination": "Ismailia",
+            "train_number": "588-589",
+            "departure_time": "04:20",
+            "arrival_time": "09:56",
+            "duration": "5 hours 36 minutes",
+            "date": "2024-08-06",
+            "type": "Russian"
+        },
+        {
+            "id": 8,
+            "origin": "Alexandria",
+            "destination": "Ismailia",
+            "train_number": "572-573",
+            "departure_time": "16:10",
+            "arrival_time": "21:19",
+            "duration": "5 hours 9 minutes",
+            "date": "2024-08-06",
+            "type": "Russian AC"
+        },
+        {
+            "id": 9,
+            "origin": "warraq",
+            "destination": "Imbaba",
+            "train_number": "572-573",
+            "departure_time": "16:10",
+            "arrival_time": "21:19",
+            "duration": "5 hours 9 minutes",
+            "date": "2024-08-06",
+            "type": "Russian AC"
+        }
+    ]
+}
