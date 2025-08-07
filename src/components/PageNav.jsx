@@ -16,7 +16,7 @@ function PageNav() {
           <NavLink to={"/tours"}>Tours</NavLink>
         </li>
         <li>
-          <NavLink to={""} className={styles.ctaLink}>
+          <NavLink to={"/login"} className={styles.ctaLink}>
             Login
           </NavLink>
         </li>

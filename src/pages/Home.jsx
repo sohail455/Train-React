@@ -6,12 +6,11 @@ function Home() {
       <PageNav />
       <section className={styles.container}>
         <h1>You Travel Across Egypt.</h1>
-        <h1>WorldWise Makes Your Trip Easier.</h1>
+        <h1>Sohail Travel Makes Your Trip Easier.</h1>
         <button onClick={() => navigate("/app")}>Let's Start</button>
       </section>
     </main>
   );
 }
-
 
 export default Home;
