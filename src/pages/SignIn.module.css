@@ -6,7 +6,7 @@
       rgba(36, 42, 46, 0.8)
     ),
     url("../signup.jpg");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: center;
   display: flex;
