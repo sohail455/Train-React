@@ -1,6 +1,6 @@
 import styles from "./SignIn.module.css";
 import PageNav from "../components/pageNav";
-
+import Footer from "../components/footer";
 function SignIn() {
   return (
     <main className={styles.loginBackground}>
@@ -51,6 +51,7 @@ function SignIn() {
           <button>Sign Up</button>
         </div>
       </form>
+      <Footer />
     </main>
   );
 }

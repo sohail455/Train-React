@@ -1,6 +1,7 @@
 import styles from "./Login.module.css";
 import PageNav from "../components/pageNav";
 import { Link } from "react-router-dom";
+import Footer from "../components/footer";
 function Login() {
   return (
     <main className={styles.loginBackground}>
@@ -38,6 +39,7 @@ function Login() {
           </Link>
         </div>
       </form>
+      <Footer />
     </main>
   );
 }

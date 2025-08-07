@@ -6,7 +6,8 @@
       rgba(36, 42, 46, 0.8)
     ),
     url("../login2.jpg");
-  position: absolute;
+  position: fixed;
+  overflow: auto;
   inset: 0;
   background-repeat: no-repeat;
   background-size: cover;
