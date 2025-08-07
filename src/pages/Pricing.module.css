@@ -1,19 +1,21 @@
 .pricing {
-  /* background-color: darkolivegreen; */
-  background-image: linear-gradient(
-      rgba(36, 42, 46, 0.8),
-      rgba(36, 42, 46, 0.8)
-    ),
-    url("../pricing.jpg");
 
+  background-image: linear-gradient(rgba(36, 42, 46, 0.8),
+      rgba(36, 42, 46, 0.8)),
+    url("../pricing.jpg");
   background-position: center;
-  inset: 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   position: fixed;
+  inset: 0;
+  justify-content: space-between;
 }
 
 .pricing h1 {
-  position: absolute; /* أو absolute حسب الحاجة */
+  position: absolute;
+  /* أو absolute حسب الحاجة */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

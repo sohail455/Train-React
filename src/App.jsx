@@ -7,6 +7,7 @@ import Tours from "./pages/Tours";
 import Career from "./pages/career";
 import Login from "./pages/Login";
 import SignIn from "./pages/SignIn";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   const [tours, setTours] = useState([]);
@@ -33,6 +34,7 @@ function App() {
           <Route path="Career" element={<Career />} />
           <Route path="login" element={<Login />} />
           <Route path="signIn" element={<SignIn />} />
+          <Route path="forgotPassword" element={<ForgotPassword />} />
         </Routes>
       </BrowserRouter>
     </>

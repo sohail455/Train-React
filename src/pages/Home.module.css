@@ -3,9 +3,12 @@
       rgba(36, 42, 46, 0.8)),
     url("../bg.jpg");
   background-position: center;
-
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   position: fixed;
+  justify-content: space-between;
   inset: 0;
 }
 

@@ -1,6 +1,8 @@
 import styles from './Career.module.css'
 import PageNav from '../components/pageNav'
 import { useState } from 'react';
+import Footer from '../components/footer';
+import { useNavigate } from 'react-router-dom';
 
 
 function Career() {
@@ -9,24 +11,36 @@ function Career() {
         e.preventDefault();
         setIsSubmit(true)
     }
+    const navigate = useNavigate()
     return (
         <main className={styles.career}>
             <PageNav />
+            <form className={styles.form}>
+                <h1>Join Us Now</h1>
+                <div className={styles.row}>
+                    <label htmlFor="name">Name</label>
+                    <input placeholder='enter your name' id='name' />
+                </div>
+                <div className={styles.row}>
+                    <label htmlFor="email">Email</label>
+                    <input placeholder='enter your email' id='email' />
+                </div>
+                <div className={styles.row}>
+                    <label htmlFor="number">Phone Number</label>
+                    <input placeholder='enter your Phone Number' id='number' type='text' />
+                </div>
 
-            {isSubmit ? <h1>Thank You For Your Interset, We will Contact You Soon!</h1> : <section className={styles.section}>
-                <form className={styles.form}>
-                    <label className={styles.title}>Join Us Now</label>
-                    <div>
-                        <label htmlFor="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required />
-                    </div>
-                    <div>
-                        <label htmlFor="email">Your Email:</label>
-                        <input type="email" id="email" name="email" required />
-                    </div>
-                    <button type="submit" onClick={(e) => handelClick(e)}>Submit</button>
-                </form>
-            </section>}
+                <div className={styles.buttons}>
+                    <button style={{ backgroundColor: "gray" }} onClick={(e) => {
+                        e.preventDefault()
+                        navigate(-1)
+                    }}> &larr; Back</button>
+                    <button onClick={(e) => e.preventDefault()}>Submit</button>
+                </div>
+
+            </form>
+
+            <Footer />
         </main>
     );
 }
