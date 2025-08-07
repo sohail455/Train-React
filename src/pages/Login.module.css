@@ -1,10 +1,7 @@
 .loginBackground {
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(
-      rgba(36, 42, 46, 0.8),
-      rgba(36, 42, 46, 0.8)
-    ),
+
+  background-image: linear-gradient(rgba(36, 42, 46, 0.8),
+      rgba(36, 42, 46, 0.8)),
     url("../login2.jpg");
   position: fixed;
   overflow: auto;
@@ -12,6 +9,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .form {
@@ -46,9 +46,22 @@
   cursor: pointer;
   margin-top: 20px;
 }
+
 .form input {
   padding: 10px;
   border: none;
   box-shadow: none;
   border-radius: 8px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

@@ -1,7 +1,9 @@
 import styles from "./SignIn.module.css";
 import PageNav from "../components/pageNav";
 import Footer from "../components/footer";
+import { useNavigate } from 'react-router-dom';
 function SignIn() {
+  const navigate = useNavigate()
   return (
     <main className={styles.loginBackground}>
       <PageNav />
@@ -47,7 +49,11 @@ function SignIn() {
             required
           />
         </div>
-        <div className="row">
+        <div className={styles.buttons}>
+          <button style={{ backgroundColor: "gray" }} onClick={(e) => {
+            e.preventDefault()
+            navigate(-1)
+          }}> &larr; Back</button>
           <button>Sign Up</button>
         </div>
       </form>

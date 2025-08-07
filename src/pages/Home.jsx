@@ -1,5 +1,6 @@
 import styles from "./Home.module.css";
 import PageNav from "../components/pageNav";
+import Footer from "../components/footer";
 function Home() {
   return (
     <main className={styles.homePage}>
@@ -9,6 +10,7 @@ function Home() {
         <h1>Sohail Travel Makes Your Trip Easier.</h1>
         <button onClick={() => navigate("/app")}>Let's Start</button>
       </section>
+      <Footer />
     </main>
   );
 }
