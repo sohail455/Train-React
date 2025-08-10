@@ -16,7 +16,7 @@ function Career() {
         <main className={styles.career}>
             <PageNav />
             <form className={styles.form}>
-                <h1>Join Us Now</h1>
+                <h1>Join Us Now<span>👷</span></h1>
                 <div className={styles.row}>
                     <label htmlFor="name">Name</label>
                     <input placeholder='enter your name' id='name' />

@@ -56,8 +56,8 @@ function Login() {
         <PageNav />
 
         <form className={styles.form}>
-          <div className="row">
-            <h1>Welcome</h1>
+          <div className={styles.welcome}>
+            <h3>Welcome<span>❤️</span></h3>
             <p>Pleased to see you again</p>
           </div>
           <div className={styles.row}>

@@ -47,14 +47,17 @@ function SignIn() {
           passwordConfirm,
         }),
       });
-      if (!res.ok) {
+      if (res.ok) {
+        dispatch({ type: "reset" });
+        console.log(res);
+        alert("Registered Sucessfully");
+        navigate('/login')
+      } else {
         const errorData = await res.json();
         throw errorData;
       }
 
-      dispatch({ type: "reset" });
-      console.log(res);
-      alert("Registered Sucessfully");
+
     } catch (err) {
       alert(err.message);
     }

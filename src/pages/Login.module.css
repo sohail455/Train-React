@@ -65,3 +65,17 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.welcome h3 {
+  font-size: 45px;
+  margin: 0.5px;
+}
+
+.welcome p {
+  font-size: 25px;
+  margin: 0.5px;
+}
+
+.welcome {
+  margin-bottom: 1px;
+}
