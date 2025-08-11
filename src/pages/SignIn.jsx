@@ -50,14 +50,12 @@ function SignIn() {
       if (res.ok) {
         dispatch({ type: "reset" });
         console.log(res);
-        alert("Registered Sucessfully");
-        navigate('/login')
+        alert("Confirmation Token Sent");
+        navigate("confirmation");
       } else {
         const errorData = await res.json();
         throw errorData;
       }
-
-
     } catch (err) {
       alert(err.message);
     }

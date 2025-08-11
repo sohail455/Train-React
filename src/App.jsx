@@ -8,6 +8,8 @@ import Career from "./pages/career";
 import Login from "./pages/Login";
 import SignIn from "./pages/SignIn";
 import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import ConfirmEmail from "./pages/ConfirmEmail";
 
 function App() {
   const [tours, setTours] = useState([]);
@@ -35,6 +37,8 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signIn" element={<SignIn />} />
           <Route path="forgotPassword" element={<ForgotPassword />} />
+          <Route path="resetpassword" element={<ResetPassword />} />
+          <Route path="signIn/confirmation" element={<ConfirmEmail />} />
         </Routes>
       </BrowserRouter>
     </>
