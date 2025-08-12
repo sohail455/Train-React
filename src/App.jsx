@@ -16,9 +16,16 @@ function App() {
   useEffect(function () {
     async function getTours() {
       try {
-        const res = await fetch("http://localhost:3000/trips");
+        const res = await fetch("http://localhost:800/api/v1/tours", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+
+        );
         const data = await res.json();
-        setTours(data);
+        setTours(data.data);
       } catch {
         alert("error in getting data..");
       }
