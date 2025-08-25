@@ -10,6 +10,7 @@ import SignIn from "./pages/SignIn";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import ConfirmEmail from "./pages/ConfirmEmail";
+import AppLayout from "./pages/AppLayout";
 
 function App() {
   const [tours, setTours] = useState([]);
@@ -38,6 +39,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
+          <Route path="applayout" element={< AppLayout />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="tours" element={<Tours tours={tours} />} />
           <Route path="Career" element={<Career />} />
