@@ -11,6 +11,8 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import ConfirmEmail from "./pages/ConfirmEmail";
 import AppLayout from "./pages/AppLayout";
+import { Authprovider } from "./contexts/AuthContxt";
+import ProtectedRoute from "./components/ProtectedRout";
 
 function App() {
   const [tours, setTours] = useState([]);
@@ -36,20 +38,26 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="applayout" element={< AppLayout />} />
-          <Route path="pricing" element={<Pricing />} />
-          <Route path="tours" element={<Tours tours={tours} />} />
-          <Route path="Career" element={<Career />} />
-          <Route path="login" element={<Login />} />
-          <Route path="signIn" element={<SignIn />} />
-          <Route path="forgotPassword" element={<ForgotPassword />} />
-          <Route path="resetpassword" element={<ResetPassword />} />
-          <Route path="signIn/confirmation" element={<ConfirmEmail />} />
-        </Routes>
-      </BrowserRouter>
+      <Authprovider>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="applayout" element={
+              <ProtectedRoute>
+                < AppLayout />
+              </ProtectedRoute>
+            } />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="tours" element={<Tours tours={tours} />} />
+            <Route path="Career" element={<Career />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signIn" element={<SignIn />} />
+            <Route path="forgotPassword" element={<ForgotPassword />} />
+            <Route path="resetpassword" element={<ResetPassword />} />
+            <Route path="signIn/confirmation" element={<ConfirmEmail />} />
+          </Routes>
+        </BrowserRouter>
+      </Authprovider>
     </>
   );
 }

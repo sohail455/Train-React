@@ -1,9 +1,10 @@
 import styles from "./Login.module.css";
 import PageNav from "../components/pageNav";
-import { Link } from "react-router-dom";
+import { Link, replace } from "react-router-dom";
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
+import { useAuth } from "../contexts/AuthContxt";
 
 const initialState = {
   email: "",
@@ -22,27 +23,23 @@ function reducer(state, action) {
       return state;
   }
 }
+
+
+
 function Login() {
+
+  const { login, isAuthenticated } = useAuth()
+
+  const navigator = useNavigate()
+
+  useEffect(function () { if (isAuthenticated) navigator("/applayout", { replace: true }) }, [isAuthenticated])
+
   const [{ email, password }, dispatch] = useReducer(reducer, initialState);
   async function handleSetReq(e) {
     try {
       e.preventDefault();
-      const res = await fetch("http://localhost:800/api/v1/users/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw errorData;
-      }
-      const data = await res.json();
-      console.log(data);
+      await login(email, password)
+
       dispatch({ type: "reset" });
       alert("Logged In Successfully" + "✔");
     } catch (err) {
