@@ -1,17 +1,44 @@
-import { useActionState } from "react";
 import Logo from "./Logo";
 import styles from "./pageNav.module.css";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContxt";
 function PageNav() {
-  const { isAuthenticated, user } = useAuth()
-  function handleClick() { }
+  const { isAuthenticated, user, logout } = useAuth();
+  function handleClick(e) {
+    e.preventDefault();
+    logout();
+  }
   return (
     <nav className={styles.nav}>
-      {isAuthenticated ? <>
-        <span>Welcome, {user.name}</span>
-        <button onClick={handleClick}>Logout</button>
-      </> :
+      {isAuthenticated ? (
+        <>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              gap: "2rem",
+            }}
+          >
+            <img
+              src="./profile.jpg"
+              style={{ borderRadius: "100px", height: "4rem" }}
+            />
+            <span
+              style={{
+                color: "white",
+                fontWeight: "bold",
+                fontSize: "25px",
+                margin: "auto",
+              }}
+            >
+              Welcome, {user.name.split(" ")[0].toUpperCase()}
+            </span>
+          </div>
+
+          <button onClick={handleClick}>Logout</button>
+        </>
+      ) : (
         <>
           <Logo />
           <ul>
@@ -31,9 +58,8 @@ function PageNav() {
             </li>
           </ul>
         </>
-      }
+      )}
     </nav>
-
   );
 }
 

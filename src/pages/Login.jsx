@@ -24,22 +24,24 @@ function reducer(state, action) {
   }
 }
 
-
-
 function Login() {
+  const { login, isAuthenticated } = useAuth();
 
-  const { login, isAuthenticated } = useAuth()
+  const navigator = useNavigate();
 
-  const navigator = useNavigate()
-
-  useEffect(function () { if (isAuthenticated) navigator("/applayout", { replace: true }) }, [isAuthenticated])
+  useEffect(
+    function () {
+      if (isAuthenticated) navigator("/applayout", { replace: true });
+    },
+    [isAuthenticated]
+  );
 
   const [{ email, password }, dispatch] = useReducer(reducer, initialState);
+
   async function handleSetReq(e) {
     try {
       e.preventDefault();
-      await login(email, password)
-
+      await login(email, password);
       dispatch({ type: "reset" });
       alert("Logged In Successfully" + "✔");
     } catch (err) {
@@ -54,7 +56,9 @@ function Login() {
 
         <form className={styles.form}>
           <div className={styles.welcome}>
-            <h3>Welcome<span>❤️</span></h3>
+            <h3>
+              Welcome<span>❤️</span>
+            </h3>
             <p>Pleased to see you again</p>
           </div>
           <div className={styles.row}>
